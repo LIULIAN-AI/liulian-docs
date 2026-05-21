@@ -1,0 +1,116 @@
+site_name: LIULIAN platform docs
+site_description: Federation-level documentation for the LIULIAN 9-repo platform
+site_author: Linlin Jia
+copyright: © 2026 Linlin Jia
+
+repo_url: https://github.com/jajupmochi/liulian-docs
+repo_name: jajupmochi/liulian-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light
+  font:
+    text: Switzer
+    code: JetBrains Mono
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+# Cross-repo links (../../liulian-web/...) and the .zh.md siblings
+# are expected to live outside the docs tree or outside the nav.
+# Treat them as informational only — don't fail the strict build.
+validation:
+  omitted_files: ignore
+  absolute_links: ignore
+  unrecognized_links: ignore
+  links:
+    not_found: ignore
+
+nav:
+  - Home: index.md
+  - Federation:
+      - Overview: federation/overview.md
+      - Docs map: federation/docs-map.md
+  - Strategy:
+      - Platform blueprint: strategy/PLATFORM_BLUEPRINT.md
+      - Neobanker reuse map: strategy/NEOBANKER_REUSE_MAP.md
+      - One-week sprint: strategy/ONE_WEEK_SPRINT.md
+      - Audit report 2026-05-12: strategy/AUDIT_REPORT_2026-05-12.md
+      - Advisor briefing 2026-05-19: advisor-report-2026-05-19/README.md
+  - ADRs:
+      - Index: strategy/adr/index.md
+      - "0001 · Multi-repo split": strategy/adr/0001-multi-repo-split.md
+      - "0002 · Custom agent (not LangGraph)": strategy/adr/0002-custom-agent-not-langgraph.md
+      - "0003 · TimescaleDB (not TDengine)": strategy/adr/0003-timescaledb-not-tdengine-now.md
+      - "0004 · UniBe red as anchor": strategy/adr/0004-unibe-red-as-anchor.md
+      - "0005 · Three-entity unified table": strategy/adr/0005-tracker-three-entity-unified-table.md
+      - "0006 · Fork from neobanker": strategy/adr/0006-fork-and-adapt-from-neobanker.md
+      - "0007 · Reject refine-dev-ui": strategy/adr/0007-reject-refine-dev-ui.md
+      - "0008 · Canvas orchestrator reuse": strategy/adr/0008-canvas-orchestrator-reuse.md
+      - "0009 · Spring → FastAPI translation": strategy/adr/0009-spring-boot-to-fastapi-pattern-translation.md
+      - "0010 · Hybrid shadcn + antd": strategy/adr/0010-hybrid-shadcn-antd-stack.md
+      - "0011 · Dev-env separate from ops": strategy/adr/0011-dev-env-separate-from-ops.md
+  - Agile:
+      - Essentials & templates: agile/essentials.md
+  - User stories:
+      - Overview: user-stories/index.md
+      - "1 · The Doorway (门厅)": user-stories/01-home-onboarding.md
+      - "2 · The Annotated Drop (落档)": user-stories/02-import-data.md
+      - "3 · First Light (亮起)": user-stories/03-auto-bi.md
+      - "4 · The Pencil (改笔)": user-stories/04-edit-data.md
+      - "5 · The Graft (嫁接)": user-stories/05-add-data.md
+      - "6 · The Easel (画板)": user-stories/06-author-chart.md
+  - Specs (index by repo): specs-index/index.md

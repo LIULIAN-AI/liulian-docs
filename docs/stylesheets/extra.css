@@ -1,0 +1,10 @@
+:root {
+  --md-primary-fg-color:        #E20613;
+  --md-primary-fg-color--light: #FAD9DC;
+  --md-primary-fg-color--dark:  #B00510;
+  --md-accent-fg-color:         #E20613;
+}
+.md-typeset h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.02em; }
+.md-typeset h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.015em; }
+.md-typeset code, .md-typeset kbd { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.md-typeset table:not([class]) th { font-family: 'JetBrains Mono'; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
