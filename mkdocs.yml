@@ -105,6 +105,7 @@ nav:
       - "0011 · Dev-env separate from ops": strategy/adr/0011-dev-env-separate-from-ops.md
   - Agile:
       - Essentials & templates: agile/essentials.md
+      - "CI skips · 2026-05-21": agile/ci-skips-2026-05-21.md
   - User stories:
       - Overview: user-stories/index.md
       - "1 · The Doorway (门厅)": user-stories/01-home-onboarding.md
