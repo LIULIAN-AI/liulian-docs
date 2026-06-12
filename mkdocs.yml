@@ -103,6 +103,10 @@ nav:
       - "0009 · Spring → FastAPI translation": strategy/adr/0009-spring-boot-to-fastapi-pattern-translation.md
       - "0010 · Hybrid shadcn + antd": strategy/adr/0010-hybrid-shadcn-antd-stack.md
       - "0011 · Dev-env separate from ops": strategy/adr/0011-dev-env-separate-from-ops.md
+  - Tasks:
+      - Conventions: tasks/index.md
+      - "liulian-python · 2026-06": tasks/liulian-python/2026-06.md
+      - "liulian-python · 2026-05": tasks/liulian-python/2026-05.md
   - Agile:
       - Essentials & templates: agile/essentials.md
       - "CI skips · 2026-05-21": agile/ci-skips-2026-05-21.md
